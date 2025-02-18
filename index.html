@@ -14,26 +14,62 @@
         <p>Delicious Pasta in a Box, Just for You!</p>
         <a href="https://www.instagram.com/pastakotak/" target="_blank">Follow Us on Instagram</a>
     </header>
+    
     <section id="menu">
         <h2 class="scroll-reveal visible">Menu</h2>
         <div class="menu-item">
             <img src="carbonara.jpg" alt="Carbonara">
-            <p>🍝 Carbonara - $5</p>
+            <p>🍝 Carbonara - 7 MYR</p>
         </div>
         <div class="menu-item">
             <img src="bolognese.jpg" alt="Bolognese">
-            <p>🍝 Bolognese - $6</p>
+            <p>🍝 Bolognese - 8 MYR</p>
         </div>
         <div class="menu-item">
             <img src="aglio-olio.jpg" alt="Aglio Olio">
-            <p>🍝 Aglio Olio - $5</p>
+            <p>🍝 Aglio Olio - 9 MYR</p>
         </div>
     </section>
     
     <section id="order">
-        <h2>Order Now</h2>
         <p>Place your order via WhatsApp!</p>
-        <a href="https://wa.me/60139529463" target="_blank">Order on WhatsApp</a>
+        <button id="order-btn">Order Now</button>
     </section>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Order</h2>
+        <div id="menu-items"></div>
+        <h3>Total: <span id="total-price">0</span> MYR</h3>
+        <h3>Order Summary:</h3>
+        <ul id="order-summary"></ul>
+        <button id="send-whatsapp">Send Order</button>
+    </div>
+</div>
+</div>
+    <audio id="background-music" autoplay loop>
+        <source src="mia.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<script>
+    // JavaScript for Background Music
+    const audio = document.getElementById("background-music");
+
+// Set medium volume (0.5 = 50%)
+audio.volume = 0.5;
+
+// Try to play the audio when the page loads
+audio.play().catch(() => {
+    console.log("Autoplay blocked. Waiting for user interaction.");
+});
+
+// Play when user clicks anywhere (fix for autoplay issues)
+document.body.addEventListener("click", function () {
+    audio.play();
+}, { once: true });
+</script>
+</script>
 </body>
 </html>
