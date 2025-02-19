@@ -1,0 +1,94 @@
+<section id="menu">
+    <h2 class="scroll-reveal visible">Menu</h2>
+
+    <!-- Aglio Olio -->
+    <div class="menu-item">
+        <h3>🍝 Aglio Olio</h3>
+        <p>Flavourful combination of garlic, olive oil, chili flakes, and fresh parsley.</p>
+        <button onclick="showOptions('aglio-olio-options')">View Options</button>
+        <div id="aglio-olio-options" style="display: none;">
+            <div class="option-item">
+                <img src="images/aglio-olio-chicken.jpg" alt="Roasted Chicken Aglio Olio">
+                <p>🍗 Roasted Chicken - 12 MYR</p>
+            </div>
+            <div class="option-item">
+                <img src="images/aglio-olio-beef.jpg" alt="Beef Strips Aglio Olio">
+                <p>🥩 Beef Strips - 13 MYR</p>
+            </div>
+            <div class="option-item">
+                <img src="images/aglio-olio-prawn.jpg" alt="Prawn Aglio Olio">
+                <p>🍤 Prawn - 15 MYR</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alfredo -->
+    <div class="menu-item">
+        <h3>🍝 Alfredo</h3>
+        <p>Served with creamy white sauce, flavourful combination with garlic and fresh parsley.</p>
+        <button onclick="showOptions('alfredo-options')">View Options</button>
+        <div id="alfredo-options" style="display: none;">
+            <div class="option-item">
+                <img src="images/alfredo-chicken.jpg" alt="Roasted Chicken Alfredo">
+                <p>🍗 Roasted Chicken - 13 MYR</p>
+            </div>
+            <div class="option-item">
+                <img src="images/alfredo-beef.jpg" alt="Beef Strips Alfredo">
+                <p>🥩 Beef Strips - 14 MYR</p>
+            </div>
+            <div class="option-item">
+                <img src="images/alfredo-mushroom.jpg" alt="Shiitake Mushroom Alfredo">
+                <p>🍄 Shiitake Mushroom - 10 MYR</p>
+            </div>
+            <div class="option-item">
+                <img src="images/alfredo-prawn.jpg" alt="Prawn Alfredo">
+                <p>🍤 Prawn - 15 MYR</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Order Modal -->
+<div id="order-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Order</h2>
+
+        <!-- Order Items -->
+        <div id="menu-items"></div>
+
+        <!-- Total Price -->
+        <h3>Total: <span id="total-price">0</span> MYR</h3>
+
+        <!-- Order Summary -->
+        <h3>Order Summary:</h3>
+        <ul id="order-summary"></ul>
+
+        <!-- Send Order Button -->
+        <button id="send-whatsapp">Send Order</button>
+    </div>
+</div>
+<script>
+    function showOptions(id) {
+        const options = document.getElementById(id);
+        options.style.display = options.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+<style>
+    .menu-item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .option-item {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .option-item img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+</style>
